@@ -11,7 +11,7 @@
   "devDependencies": {
     "prettier": "^2.2.1"
   },
-  "bin": {
-    "vider-dl": "./bin.js"
+  "scripts": {
+    "prepublishOnly": "cd cli && yarn build"
   }
 }
