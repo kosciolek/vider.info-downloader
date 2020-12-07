@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "dist/index.js",
   "scripts": {
-    "build": "yarn tsc --build"
+    "build": "yarn tsc --build",
+    "prepublishOnly": "yarn build"
   },
   "dependencies": {
     "@types/yargs": "^15.0.11",

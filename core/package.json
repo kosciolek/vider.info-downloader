@@ -6,7 +6,8 @@
     "node-fetch": "^2.6.1"
   },
   "scripts": {
-    "build": "yarn tsc --build"
+    "build": "yarn tsc --build",
+    "prepublishOnly": "yarn build"
   },
   "devDependencies": {
     "@types/node": "^14.14.10",

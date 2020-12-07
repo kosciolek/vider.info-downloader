@@ -10,8 +10,5 @@
   "license": "MIT",
   "devDependencies": {
     "prettier": "^2.2.1"
-  },
-  "scripts": {
-    "prepublishOnly": "cd cli && yarn build"
   }
 }
