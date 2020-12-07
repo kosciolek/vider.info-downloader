@@ -1,6 +1,6 @@
 {
   "name": "@vider-downloader/cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/index.js",
   "scripts": {
     "build": "yarn tsc --build",
@@ -8,16 +8,16 @@
   },
   "dependencies": {
     "@types/yargs": "^15.0.11",
+    "@vider-downloader/core": "1.0.0",
     "chalk": "^4.1.0",
     "ora": "^5.1.0",
-    "yargs": "^16.2.0",
-    "@vider-downloader/core": "1.0.0"
+    "yargs": "^16.2.0"
   },
   "devDependencies": {
     "@types/chalk": "^2.2.0",
     "@types/ora": "^3.2.0"
   },
   "bin": {
-    "vider-dl": "./bin.js"
+    "vider-dl": "./bin/index.js"
   }
 }
