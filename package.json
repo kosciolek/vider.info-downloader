@@ -6,7 +6,7 @@
   ],
   "private": true,
   "author": "Sun-2",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "devDependencies": {
     "prettier": "^2.2.1"
