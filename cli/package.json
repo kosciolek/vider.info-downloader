@@ -1,6 +1,6 @@
 {
   "name": "@vider-downloader/cli",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "main": "dist/index.js",
   "scripts": {
     "build": "yarn tsc --build",
@@ -19,5 +19,9 @@
   },
   "bin": {
     "vider-dl": "./bin/index.js"
-  }
+  },
+  "files": [
+    "dist/*",
+    "bin/*"
+  ]
 }
