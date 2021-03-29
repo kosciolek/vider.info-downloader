@@ -1,11 +1,16 @@
 import { Readable } from "stream";
 import fetch from "node-fetch";
-import {cookie} from "./cookie";
+import { cookie } from "./cookie";
+
+export interface ProgressReport {
+  expected: number;
+  downloaded: number;
+}
 
 export class Mp4Stream extends Readable {
   bytesDownloaded: number = 0;
-  contentLength: number | undefined;
-  onProgress: undefined | ((bytesDownloaded: number) => void);
+  contentLength?: number;
+  onProgress?: (progressReport: ProgressReport) => void;
 
   constructor(public url: string) {
     super();
@@ -26,7 +31,7 @@ export class Mp4Stream extends Readable {
           "sec-fetch-dest": "video",
           "sec-fetch-mode": "no-cors",
           "sec-fetch-site": "same-site",
-          cookie
+          cookie,
         },
       });
 
@@ -34,7 +39,11 @@ export class Mp4Stream extends Readable {
 
       response.body.on("data", (data) => {
         this.bytesDownloaded += data.length;
-        if (this.onProgress) this.onProgress(this.bytesDownloaded);
+        if (this.onProgress)
+          this.onProgress({
+            downloaded: this.bytesDownloaded,
+            expected: this.contentLength!,
+          });
         this.push(data);
       });
 
