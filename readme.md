@@ -17,8 +17,14 @@ Download videos from [**vider.info**](https://vider.info/), my primary, highly l
 
 ## Installation
 
+NPM:
 ```
-$ npm i --save @vider-downloader/cli
+$ npm i -g --save @vider-downloader/cli
+```
+
+Yarn:
+```
+$ yarn global add @vider-downloader/cli
 ```
 
 ## Usage
