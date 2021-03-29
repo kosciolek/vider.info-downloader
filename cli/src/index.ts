@@ -21,7 +21,7 @@ yargs.command(
         format: `Downloading ${urlOrCode} |${colors.cyan(
           "{bar}"
         )}| ${colors.red("{percentage}%")} || ${colors.blue(
-          "{value}/{total} MBs"
+          "{value}/{total} Bytes"
         )} || ${colors.yellow("ETA: {eta}s")}`,
       },
       cliProgress.Presets.shades_classic
