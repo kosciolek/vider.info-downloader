@@ -3,7 +3,7 @@
 
 Download videos from [**vider.info**](https://vider.info/), my primary, highly legal, and (with the help of this software) completely ad-free source of the Dr. House series.
 
-![](docs/screen.png)
+![](../docs/screen.png)
 
 ## Table of Contents
 

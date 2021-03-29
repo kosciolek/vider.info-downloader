@@ -1,6 +1,6 @@
 {
   "name": "@vider-downloader/core",
-  "version": "1.6.1",
+  "version": "1.6.2",
   "main": "dist/index.js",
   "dependencies": {
     "node-fetch": "^2.6.1"
