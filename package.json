@@ -5,9 +5,20 @@
     "cli"
   ],
   "private": true,
+  "scripts": {
+    "lint": "yarn prettier --write . && yarn eslint . --fix",
+    "prepare": "husky install"
+  },
   "author": "Sun-2",
   "license": "MIT",
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.26.0",
+    "@typescript-eslint/parser": "^4.26.0",
+    "eslint": "^7.27.0",
+    "eslint-config-airbnb-typescript": "^12.3.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.23.4",
+    "husky": "^7.0.1",
     "prettier": "^2.2.1"
   }
 }

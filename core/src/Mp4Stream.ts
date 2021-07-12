@@ -8,8 +8,10 @@ export interface ProgressReport {
 }
 
 export class Mp4Stream extends Readable {
-  bytesDownloaded: number = 0;
+  bytesDownloaded = 0;
+
   contentLength?: number;
+
   onProgress?: (progressReport: ProgressReport) => void;
 
   constructor(public url: string) {
@@ -17,6 +19,7 @@ export class Mp4Stream extends Readable {
   }
 
   private isRunning = false;
+
   async _read() {
     if (this.isRunning) return;
 

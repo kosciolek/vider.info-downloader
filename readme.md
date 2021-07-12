@@ -1,4 +1,3 @@
-
 # Vider-downloader
 
 Download videos from [**vider.info**](https://vider.info/), my primary, highly legal, and (with the help of this software) completely ad-free source of the Dr. House series.
@@ -18,11 +17,13 @@ Download videos from [**vider.info**](https://vider.info/), my primary, highly l
 ## Installation
 
 NPM:
+
 ```
 $ npm i -g --save @vider-downloader/cli
 ```
 
 Yarn:
+
 ```
 $ yarn global add @vider-downloader/cli
 ```
@@ -40,6 +41,7 @@ $ vider-dl https://vider.info/vid/+fs8xec
 ```
 
 Example (code):
+
 ```
 $ vider-dl +fs8xec
 ```

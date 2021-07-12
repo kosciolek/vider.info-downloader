@@ -1,4 +1,3 @@
-
 # Vider-downloader
 
 Download videos from vider.info programmatically.

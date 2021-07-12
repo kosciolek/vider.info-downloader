@@ -1,8 +1,8 @@
+import { createWriteStream } from "fs";
 import { fetchVideoMetadata } from "./fetchVideoMetadata";
 import { fetchMp4Url } from "./fetchMp4Url";
 import { Mp4Stream } from "./Mp4Stream";
-import { createWriteStream } from "fs";
-import {parseVideoCode} from "./parseVideoCode";
+import { parseVideoCode } from "./parseVideoCode";
 
 export const download = async (
   urlOrCode: string,

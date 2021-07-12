@@ -4,6 +4,6 @@
     "rootDir": "src",
     "outDir": "dist",
     "incremental": true,
-    "composite": true,
+    "composite": true
   }
 }

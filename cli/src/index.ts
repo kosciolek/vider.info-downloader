@@ -3,6 +3,7 @@ import { download } from "@vider-downloader/core";
 import cliProgress from "cli-progress";
 import colors from "colors";
 
+// eslint-disable-next-line @typescript-eslint/no-unused-expressions
 yargs.command(
   ["download <urlOrCode>", "$0 <urlOrCode>"],
   "Download a video given its URL or code.",

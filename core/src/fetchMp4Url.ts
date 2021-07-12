@@ -1,5 +1,5 @@
 import fetch from "node-fetch";
-import {cookie} from "./cookie";
+import { cookie } from "./cookie";
 
 export const fetchMp4Url = async (videoNumber: string) => {
   const link = await fetch(
