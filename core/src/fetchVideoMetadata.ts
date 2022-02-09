@@ -18,6 +18,12 @@ export const fetchVideoMetadata = async (videoCode: string) => {
     },
   }).then((resp) => resp.text());
 
+  if (res.match(/name="captcha"/)) {
+    throw new Error(
+      `Error: due to too many requests in a short timespan, Vider has temporarily blocked your IP. Wait a little, or go to the following link and solve the CAPTCHA until it unblocks. https://vider.info/embed/video/${videoCode}`
+    );
+  }
+
   try {
     const [, number] = res.match(
       /data-video-url="https:\/\/stream\.vider\.info\/video\/(\d+)\/v\.mp4/
