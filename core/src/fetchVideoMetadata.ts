@@ -20,7 +20,7 @@ export const fetchVideoMetadata = async (videoCode: string) => {
 
   try {
     const [, number] = res.match(
-      /data-video-url="https:\/\/stream\.vider\.info\/video\/(\d+)\/v\.mp4"/
+      /data-video-url="https:\/\/stream\.vider\.info\/video\/(\d+)\/v\.mp4/
     )!;
     const [, title] = res.match(/<meta name="title" content="(.*?)" \/>/)!;
     return { number, title };
