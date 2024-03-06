@@ -1,3 +1,5 @@
+**WARNING**: This tool is outdated and doesn't work. Will be updated soon.
+
 # Vider-downloader
 
 Download videos from [**vider.info**](https://vider.info/), my primary, highly legal, and (with the help of this software) completely ad-free source of the Dr. House series.
