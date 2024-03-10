@@ -23,8 +23,13 @@ jobs:
         env:
           GOOS: linux
         run: go build -v -o vider-downloader-linux
+      - name: Build Mac
+        env:
+          GOOS: darwin
+        run: go build -v -o vider-downloader-mac
       - uses: softprops/action-gh-release@v2
         with:
           files: |
             vider-downloader-windows.exe
             vider-downloader-linux
+            vider-downloader-mac
