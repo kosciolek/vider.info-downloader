@@ -1,8 +1,0 @@
-node_modules
-dist
-yarn-error.log
-*.mp4
-tsconfig.tsbuildinfo
-.vscode
-.idea
-.history

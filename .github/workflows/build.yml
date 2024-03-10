@@ -1,0 +1,33 @@
+name: build
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Go
+        uses: actions/setup-go@v2
+        with:
+          go-version: 1.22
+      - name: Check out code
+        uses: actions/checkout@v2
+      - name: Get dependencies
+        run: go mod download
+      - name: Build Windows
+        env:
+          GOARCH: windows
+        run: go build -v -o vider-downloader-windows.exe
+      - name: Build Linux
+        env:
+          GOARCH: linux
+        run: go build -v -o vider-downloader-linux
+      - name: Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            vider-downloader-windows.exe
+            vider-downloader-linux
