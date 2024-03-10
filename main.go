@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	"io"
-	"log"
 	"net/http"
 	"os"
 	"path/filepath"
@@ -128,7 +127,6 @@ func download(title string, url string) error {
 		n, err := resp.Body.Read(buf)
 		if err != nil {
 			if err == io.EOF {
-				log.Printf("finished downloading")
 				break
 			}
 			return fmt.Errorf("error reading chunk: %v", err)
