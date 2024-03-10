@@ -18,7 +18,7 @@ jobs:
       - name: Build Windows
         env:
           GOOS: windows
-        run: go build -v -o vider-downloader-windows.exe
+        run: go build -v -o vider-downloader.exe
       - name: Build Linux
         env:
           GOOS: linux
@@ -30,6 +30,6 @@ jobs:
       - uses: softprops/action-gh-release@v2
         with:
           files: |
-            vider-downloader-windows.exe
+            vider-downloader.exe
             vider-downloader-linux
             vider-downloader-mac
