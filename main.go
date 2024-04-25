@@ -18,7 +18,7 @@ func main() {
 	if len(args) != 1 {
 		println("missing video link, link should be like https://vider.info/vid/+fs8m8m")
 	}
-	title, link, err := getVideoURL("https://vider.info/vid/+fs8m8m")
+	title, link, err := getVideoURL(args[0])
 	if err != nil {
 		fmt.Printf("%v\n", err)
 		os.Exit(1)
