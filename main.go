@@ -16,7 +16,7 @@ func main() {
 	println("WARNING! - This program might stop working whenever vider.info changes its code.")
 	args := os.Args[1:]
 	if len(args) != 1 {
-		println("missing video link, link should be like https://vider.info/vid/+fs8m8m")
+		println("missing video link, link should be like https://vider.info/vid/+fs8m8m (<- the last part varies)")
 	}
 	title, link, err := getVideoURL(args[0])
 	if err != nil {
@@ -34,7 +34,7 @@ func main() {
 func getVideoURL(entryUrl string) (string, string, error) {
 	println("Getting video metadata...")
 	if !strings.Contains(entryUrl, "https://vider.info/vid/+f") {
-		return "", "", fmt.Errorf("invalid video url")
+		return "", "", fmt.Errorf("invalid video url, should be like https://vider.info/vid/+fs8m8m (<- the last part varies)")
 	}
 	code := strings.Replace(entryUrl, "https://vider.info/vid/+f", "", -1)
 
